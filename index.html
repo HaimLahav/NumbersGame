@@ -24,13 +24,23 @@
             border: none;
             cursor: pointer;
         }
+
+        /* עיצוב ריספונסיבי */
+        @media (max-width: 600px) {
+            input[type="number"] {
+                width: 100px;
+            }
+
+            button {
+                padding: 10px 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>משחק מספרים</h1>
-    <p>:נסה לנחש את המספר בין 1 ל-100</p>
+    <p>נסה לנחש את המספר בין 1 ל-100:</p>
     <input type="number" id="guess" min="1" max="100">
-    <p></p>
     <button onclick="checkGuess()">נחש</button>
     <p id="message"></p>
 
@@ -47,10 +57,10 @@
                 document.getElementById("message").style.color = "green";
                 document.getElementById("guess").disabled = true;
             } else if (guess < targetNumber) {
-                document.getElementById("message").innerHTML = "!מספר גבוה יותר";
+                document.getElementById("message").innerHTML = "מספר נמוך יותר!";
                 document.getElementById("message").style.color = "red";
             } else {
-                document.getElementById("message").innerHTML = "!מספר נמוך יותר";
+                document.getElementById("message").innerHTML = "מספר גבוה יותר!";
                 document.getElementById("message").style.color = "red";
             }
         }
