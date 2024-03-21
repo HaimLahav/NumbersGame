@@ -76,7 +76,7 @@
 <body>
     <h1>משחק מספרים</h1>
     <p>:נסה לנחש את המספר בין 1 ל-100</p>
-    <input type="number" id="guess" min="1" max="100">
+    <input type="number" id="guess" min="1" max="100" onkeypress="handleKeyPress(event)">
     <p></p>
     <button onclick="checkGuess()">נחש</button>
     <p id="message"></p>
