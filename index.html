@@ -3,6 +3,7 @@
 <head>
     <title>משחק מספרים</title>
     <style>
+        /* CSS */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -25,11 +26,10 @@
             cursor: pointer;
         }
 
-        /* עיצוב ריספונסיבי */
-
+        /* עיצוב ריספונסיביות */
         @media (max-width: 600px) {
             input[type="number"] {
-                width: 60%; /* שינוי רוחב הקלט ל-80% מרוחב החלון */
+                width: 80%; /* שינוי רוחב הקלט ל-80% מרוחב החלון */
                 margin: 10px auto; /* מרווח מרכזי בין הקלט לכפתור */
             }
 
@@ -41,35 +41,7 @@
                 font-size: 24px; /* שינוי גודל הכותרת על מסכים קטנים */
             }
         }
-
-        @media only screen and (max-width: 600px) {
-    input[type="number"] {
-        width: 80%;
-        margin: 10px auto;
-    }
-
-    button {
-        padding: 10px 20px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-        }
-        
     </style>
-</head>
-<body>
-
-    <h1>משחק מספרים</h1>
-    <p>:נסה לנחש את המספר בין 1 ל-100</p>
-    <input type="number" id="guess" min="1" max="100">
-    <p></p>
-    <button onclick="checkGuess()">נחש</button>
-    <p id="message"></p>
-    
-    <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cltx8ekju000dnhb16s23pjwh"></script>
-    
     <script>
         var targetNumber = Math.floor(Math.random() * 100) + 1;
         var attempts = 0;
@@ -91,5 +63,15 @@
             }
         }
     </script>
+</head>
+<body>
+    <h1>משחק מספרים</h1>
+    <p>:נסה לנחש את המספר בין 1 ל-100</p>
+    <input type="number" id="guess" min="1" max="100">
+    <p></p>
+    <button onclick="checkGuess()">נחש</button>
+    <p id="message"></p>
+    
+    <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cltx8ekju000dnhb16s23pjwh"></script>
 </body>
 </html>
